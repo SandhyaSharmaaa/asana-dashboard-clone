@@ -20,7 +20,7 @@ const ToDo = () => {
       {DoingData.map((item) => (
         <Card
           key={item.id}
-          className="w-80 section border-gray-600 rounded-lg p-2"
+          className="w-80 section border-zinc-700 rounded-lg p-2"
         >
           <CardContent className="flex items-center p-2 gap-2">
             <p className=" text-lg">{item.icon1}</p>
@@ -45,7 +45,7 @@ const ToDo = () => {
       {todoData.map((item) => (
         <Card
           key={item.id}
-          className="w-80 section border-gray-600 px-2 py-0.5 rounded-lg"
+          className="w-80 section border-zinc-700 px-2 py-0.5 rounded-lg"
         >
           <CardContent className="flex items-center gap-2">
             <span className=" text-lg text-gray-400">{item.icon1}</span>

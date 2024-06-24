@@ -4,11 +4,11 @@ import Home from "./Home";
 
 const Layout = () => {
   return (
-    <div className="min-h-screen flex flex-col flex-auto relative">
+    <div className="min-h-screen flex  flex-col flex-auto relative">
       <Header />
-      <section className="flex h-full">
+      <section className="flex h-full flex-1">
         <SideNav />
-        <main className="flex-1">
+        <main className="flex-1 home">
           <Home />
         </main>
       </section>

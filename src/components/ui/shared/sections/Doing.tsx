@@ -19,7 +19,7 @@ const Doing = () => {
       {DoingData.map((item) => (
         <Card
           key={item.id}
-          className="w-80 section border-gray-600 rounded-lg p-2"
+          className="w-80 section border-zinc-700 rounded-lg p-2"
         >
           <CardContent className="flex items-center p-2 gap-2">
             <p className=" text-lg">{item.icon1}</p>

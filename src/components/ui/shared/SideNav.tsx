@@ -28,7 +28,7 @@ const SideNav = () => {
           Inbox
           <GoDotFill className="text-orange-400" />
         </span>
-        <hr className="border-gray-400 w-full"></hr>
+        <hr className="border-zinc-700 w-full"></hr>
         <span className=" flex px-4  items-center justify-between">
           <p>Insights</p>
           <FaPlus className="text-gray-400" />
@@ -57,15 +57,18 @@ const SideNav = () => {
           <p>Teams</p>
           <FaPlus className="text-gray-400" />
         </span>
-        <span className="flex gap-2 justify-start items-center  px-4">
+        <span className="flex gap-2 w-full items-center  px-4">
           <FaUserGroup className="text-gray-400" />
-          Sunny's first team
-          <GrFormNext className="text-gray-400" />
+          <span className="flex w-full items-center justify-between">
+            Sunny's first team
+            <GrFormNext className="text-gray-400 text-xl" />
+          </span>
         </span>
-        <hr className="border-gray-400 w-full"></hr>
       </div>
       <div className="flex flex-col items-center justify-center gap-4">
-        <div className="flex py-1 border-gray-400 border w-fit rounded-lg gap-2 home justify-start items-center  px-4">
+        <hr className="border-zinc-700 w-full"></hr>
+
+        <div className="flex py-1 border-zinc-700 border w-fit rounded-lg gap-2 home justify-start items-center  px-4">
           <FiMail className="text-gray-400" />
           Invite Teammates
         </div>

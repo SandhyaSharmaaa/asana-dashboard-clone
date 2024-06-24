@@ -33,14 +33,14 @@ const SectionHeader = () => {
           </span>
         ))}
       </div>
-      <hr className="border-gray-400 w-full" />
+      <hr className="border-zinc-700 w-full" />
       <div className="flex gap-4 items-center px-4 justify-start">
         <div className="flex gap-0 text-gray-400 pt-1">
-          <div className="flex items-center justify-center gap-1 border border-gray-400 px-2 py-0.5 rounded-l-lg">
+          <div className="flex items-center justify-center gap-1 border border-zinc-700 px-2 py-0.5 rounded-l-lg">
             <FaPlus />
             <p className="text-white">Add task</p>
           </div>
-          <div className="border border-gray-400 px-2 py-0.5 rounded-r-lg">
+          <div className="border border-zinc-700 px-2 py-0.5 rounded-r-lg">
             <span className="items-center justify-center">
               <RiArrowDropDownLine size={26} />
             </span>
@@ -65,7 +65,7 @@ const SectionHeader = () => {
           </span>
         </div>
       </div>
-      <hr className="border-gray-400 w-full" />
+      <hr className="border-zinc-700 w-full" />
     </div>
   );
 };
