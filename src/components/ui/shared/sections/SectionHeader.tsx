@@ -24,7 +24,7 @@ const SectionHeader = () => {
         {sectionHeaderItems.map((item, index) => (
           <span
             key={index}
-            className={`flex items-center justify-center gap-2 flex-grow ${
+            className={`flex items-center hover:text-white justify-center gap-2 cursor-pointer flex-grow ${
               item.className || ""
             }`}
           >
