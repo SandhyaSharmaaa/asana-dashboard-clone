@@ -9,11 +9,11 @@ const Header = () => {
       <div className="flex space-x-6 items-center justify-start">
         <IoReorderThreeOutline size={30} className="cursor-pointer" />
         <div
-          className="flex border w-auto h-auto gap-2 px-1.5 py-0.5 border-gray-400
+          className="cursor-pointer flex border w-auto h-auto gap-2 px-2 py-1 border-gray-400
        rounded-lg items-center justify-center"
         >
-          <span className="flex text-center bg-red-500 rounded-full h-5 w-5 justify-center items-center cursor-pointer">
-            <FaPlus color="white" size={10} />
+          <span className="flex text-center  bg-red-500 rounded-full h-4 w-4 justify-center items-center">
+            <FaPlus color="white" size={8} />
           </span>
           Create
         </div>

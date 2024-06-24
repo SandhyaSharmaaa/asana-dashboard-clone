@@ -18,7 +18,7 @@ export function ProfileMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="gap-1 flex">
+        <div className="gap-1 cursor-pointer flex">
           <div className="rounded-full h-8 w-8 items-center justify-center text-black bg-blue-400 px-2 py-1">
             SK
           </div>

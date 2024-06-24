@@ -10,13 +10,13 @@ const SectionHeader = () => {
   return (
     <div className="flex flex-col gap-2 pt-2 sectionheader">
       <div className="flex items-center justify-between px-4">
-        <div className="flex items-center justify-start ">
+        <div className="flex items-center justify-start cursor-pointer">
           <p className="text-lg text-white">Track work request</p>
           <RiArrowDropDownLine className="text-gray-400" size={34} />
           <CiStar className="text-gray-400" size={20} />
         </div>
 
-        <div className="rounded-full bg-blue-400 h-8 w-8 items-center flex text-black justify-center">
+        <div className="rounded-full cursor-pointer bg-blue-400 h-8 w-8 items-center flex text-black justify-center">
           S
         </div>
       </div>
@@ -35,10 +35,10 @@ const SectionHeader = () => {
       </div>
       <hr className="border-zinc-700 w-full" />
       <div className="flex gap-4 items-center px-4 justify-start">
-        <div className="flex gap-0 text-gray-400 pt-1">
+        <div className="flex gap-0 text-gray-400 pt-1 cursor-pointer">
           <div className="flex items-center justify-center gap-1 border border-zinc-700 px-2 py-0.5 rounded-l-lg">
             <FaPlus />
-            <p className="text-white">Add task</p>
+            <p className="text-white ">Add task</p>
           </div>
           <div className="border border-zinc-700 px-2 py-0.5 rounded-r-lg">
             <span className="items-center justify-center">
