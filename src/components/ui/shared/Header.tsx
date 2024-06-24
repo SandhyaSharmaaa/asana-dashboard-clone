@@ -13,7 +13,7 @@ const Header = () => {
        rounded-lg items-center justify-center"
         >
           <span className="flex text-center bg-red-500 rounded-full h-5 w-5 justify-center items-center cursor-pointer">
-          <FaPlus color="white" size={10} />
+            <FaPlus color="white" size={10} />
           </span>
           Create
         </div>

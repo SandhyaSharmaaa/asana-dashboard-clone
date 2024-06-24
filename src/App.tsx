@@ -1,14 +1,11 @@
-
-
-import Layout from './components/ui/shared/Layout'
+import Layout from "./components/ui/shared/Layout";
 
 function App() {
-
   return (
     <>
-     <Layout />
+      <Layout />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

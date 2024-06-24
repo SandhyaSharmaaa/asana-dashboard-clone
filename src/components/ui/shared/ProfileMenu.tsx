@@ -1,4 +1,3 @@
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,14 +11,19 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 export function ProfileMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-      <div className="gap-1 flex"><div className="rounded-full h-8 w-8 items-center justify-center text-black bg-blue-400 px-2 py-1">SK</div><RiArrowDropDownLine size={30}/></div>
+        <div className="gap-1 flex">
+          <div className="rounded-full h-8 w-8 items-center justify-center text-black bg-blue-400 px-2 py-1">
+            SK
+          </div>
+          <RiArrowDropDownLine size={30} />
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -72,5 +76,5 @@ export function ProfileMenu() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
