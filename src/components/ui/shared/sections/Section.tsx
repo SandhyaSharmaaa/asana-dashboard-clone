@@ -8,7 +8,7 @@ const Section = () => {
   return (
     <div className="flex flex-col gap-4 w-full ">
       <SectionHeader />
-      <div className="flex gap-6  py-2 px-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 gap- py-2 px-4 ">
         <ToDo />
         <Doing />
         <Done />

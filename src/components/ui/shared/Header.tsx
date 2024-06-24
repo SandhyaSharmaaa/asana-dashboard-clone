@@ -5,8 +5,8 @@ import { ProfileMenu } from "./ProfileMenu";
 // import { BiSolidPlusCircle } from "react-icons/bi";
 const Header = () => {
   return (
-    <header className="flex justify-between items-center px-2 md:px-6 h-14 w-full sticky top-0 section z-10 shadow-md">
-      <div className="flex gap-4 items-center justify-start">
+    <header className="flex justify-between items-center px-2 md:px-6 h-14 w-full section ">
+      <div className="flex space-x-6 items-center justify-start">
         <IoReorderThreeOutline size={30} className="cursor-pointer" />
         <div
           className="flex border w-auto h-auto gap-2 px-1.5 py-0.5 border-gray-400

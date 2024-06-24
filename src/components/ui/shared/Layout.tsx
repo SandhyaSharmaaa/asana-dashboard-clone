@@ -4,7 +4,7 @@ import Home from "./Home";
 
 const Layout = () => {
   return (
-    <div className="min-h-screen flex  flex-col flex-auto relative">
+    <div className="min-h-screen flex flex-col flex-auto relative">
       <Header />
       <section className="flex h-full flex-1">
         <SideNav />

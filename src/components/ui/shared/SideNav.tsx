@@ -69,10 +69,12 @@ const SideNav = () => {
         <hr className="border-zinc-700 w-full"></hr>
 
         <div className="flex py-1 border-zinc-700 border w-fit rounded-lg gap-2 home justify-start items-center  px-4">
-          <FiMail className="text-gray-400" />
-          Invite Teammates
+          <FiMail className="text-gray-400 text-[8px] md:text-base" />
+          <p className="text-[8px] md:text-base">Invite Teammates</p>
         </div>
-        <p className="text-gray-400 pb-4">Help with Asana</p>
+        <p className="text-gray-400 pb-4 text-[8px] md:text-base">
+          Help with Asana
+        </p>
       </div>
     </div>
   );

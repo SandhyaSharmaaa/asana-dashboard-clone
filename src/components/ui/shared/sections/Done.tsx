@@ -14,7 +14,7 @@ const Done = () => {
           <HiDotsVertical />
         </div>
       </div>
-      <div className="section rounded-lg w-60 h-full">
+      <div className="section rounded-lg  h-full">
         <p className="text-center font-semibold text-gray-400 p-4">
           + Add task
         </p>
