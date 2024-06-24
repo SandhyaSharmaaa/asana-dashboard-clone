@@ -47,19 +47,19 @@ const SectionHeader = () => {
           </div>
         </div>
         <div className="flex gap-8">
-          <span className="flex items-center justify-center gap-2 flex-grow text-gray-400">
+          <span className=" cursor-pointer hover:text-white flex items-center justify-center gap-2 flex-grow text-gray-400">
             <IoFilterOutline />
             Filter
           </span>
-          <span className="flex items-center justify-center gap-2 flex-grow text-gray-400">
+          <span className="cursor-pointer hover:text-white flex items-center justify-center gap-2 flex-grow text-gray-400">
             <TbArrowsSort />
             Sort by
           </span>
-          <span className="flex items-center justify-center gap-2 flex-grow text-gray-400">
+          <span className=" cursor-pointer hover:text-white flex items-center justify-center gap-2 flex-grow text-gray-400">
             <FaLayerGroup />
             Group by
           </span>
-          <span className="flex items-center justify-center gap-2 flex-grow text-gray-400">
+          <span className="flex items-center cursor-pointer hover:text-white justify-center gap-2 flex-grow text-gray-400">
             <GrHide />
             Hide
           </span>
