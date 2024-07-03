@@ -1,27 +1,33 @@
-import { FaPlus } from "react-icons/fa6";
+import React from "react";
 import { HiDotsVertical } from "react-icons/hi";
+import { FaPlus } from "react-icons/fa6";
 import { useTasks } from "@/components/ui/context/AppContext";
 import { Card, CardContent } from "../../card";
 
-const Done = () => {
+const Hold: React.FC = () => {
   const { tasks, handleOpenForm, handleEditTask } = useTasks();
 
   return (
     <div className="flex flex-col">
-      <div className="flex gap-2 items-start justify-between">
+      <div className="flex gap-2 items-start justify-between ">
         <div className="flex gap-2 items-center">
-          <p className="text-white text-lg ">Done</p>
+          <p
+            className="text-white text-lg cursor-pointer"
+            onClick={handleOpenForm}
+          >
+            Hold
+          </p>
           <p className="text-gray-400">
-            {tasks.filter((task) => task.status === "done").length}
+            {tasks.filter((task) => task.status === "hold").length}
           </p>
         </div>
-        <div className="flex gap-4 text-white ">
-          <FaPlus onClick={handleOpenForm} />
+        <div className="flex gap-4 text-white">
+          <FaPlus className="cursor-pointer" onClick={handleOpenForm} />
           <HiDotsVertical />
         </div>
       </div>
       {tasks
-        .filter((task) => task.status === "done")
+        .filter((task) => task.status === "hold")
         .map((task, index) => (
           <Card
             key={index}
@@ -41,7 +47,7 @@ const Done = () => {
         ))}
       <div
         className={`${
-          tasks.filter((task) => task.status === "done").length > 0
+          tasks.filter((task) => task.status === "hold").length > 0
             ? ""
             : "section"
         } rounded-lg  h-full`}
@@ -53,8 +59,9 @@ const Done = () => {
           + Add task
         </p>
       </div>
+      {/* <AddTaskModal isOpen={isOpen} setIsOpen={setIsOpen} /> */}
     </div>
   );
 };
 
-export default Done;
+export default Hold;

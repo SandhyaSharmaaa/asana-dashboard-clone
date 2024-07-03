@@ -2,6 +2,7 @@ import { IoReorderThreeOutline } from "react-icons/io5";
 // import { HiPlusCircle } from "react-icons/hi";
 import { FaPlus, FaSearch } from "react-icons/fa";
 import { ProfileMenu } from "./ProfileMenu";
+import { ModeToggle } from "../ToggleTheme";
 // import { BiSolidPlusCircle } from "react-icons/bi";
 const Header = () => {
   return (
@@ -31,6 +32,7 @@ const Header = () => {
           <p className="text-orange-400">Free Trial</p>
           <p className="text-white">30 Days left</p>
         </div>
+        <ModeToggle />
         <div className="border rounded-lg border-white px-2 py-1 cursor-pointer text-white">
           What's in my Trial
         </div>

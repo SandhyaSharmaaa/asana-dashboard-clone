@@ -6,7 +6,11 @@ import { IoFilterOutline } from "react-icons/io5";
 import { TbArrowsSort } from "react-icons/tb";
 import { FaLayerGroup } from "react-icons/fa6";
 import { GrHide } from "react-icons/gr";
+import { useTasks } from "@/components/ui/context/AppContext";
+
 const SectionHeader = () => {
+  const { handleOpenForm } = useTasks();
+
   return (
     <div className="flex flex-col gap-2 pt-2 sectionheader">
       <div className="flex items-center justify-between px-4">
@@ -36,7 +40,10 @@ const SectionHeader = () => {
       <hr className="border-zinc-700 w-full" />
       <div className="flex gap-4 items-center px-4 justify-start">
         <div className="flex gap-0 text-gray-400 pt-1 cursor-pointer">
-          <div className="flex items-center justify-center gap-1 border border-zinc-700 px-2 py-0.5 rounded-l-lg">
+          <div
+            className="flex items-center justify-center gap-1 border border-zinc-700 px-2 py-0.5 rounded-l-lg cursor-pointer"
+            onClick={handleOpenForm}
+          >
             <FaPlus />
             <p className="text-white ">Add task</p>
           </div>
