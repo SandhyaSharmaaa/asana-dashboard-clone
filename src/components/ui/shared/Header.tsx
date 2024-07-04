@@ -4,11 +4,15 @@ import { FaPlus, FaSearch } from "react-icons/fa";
 import { ProfileMenu } from "./ProfileMenu";
 import { ModeToggle } from "../ToggleTheme";
 // import { BiSolidPlusCircle } from "react-icons/bi";
-const Header = () => {
+const Header = ({ toggleSideNav }) => {
   return (
-    <header className="flex justify-between items-center px-2 md:px-6 h-14 w-full section ">
+    <header className="flex justify-between items-center px-2 md:px-6 h-14 w-full section">
       <div className="flex space-x-6 items-center justify-start">
-        <IoReorderThreeOutline size={30} className="cursor-pointer" />
+        <IoReorderThreeOutline
+          size={30}
+          className="cursor-pointer"
+          onClick={toggleSideNav}
+        />
         <div
           className="cursor-pointer flex border w-auto h-auto gap-2 px-2 py-1 border-gray-400
        rounded-lg items-center justify-center"
