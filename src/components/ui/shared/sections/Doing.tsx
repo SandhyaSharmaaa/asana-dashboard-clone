@@ -12,7 +12,9 @@ const Doing = () => {
       <div className="flex gap-2 items-start justify-between ">
         <div className="flex gap-2 items-center">
           <p className="text-white text-lg">Doing</p>
-          <p className="text-gray-400">5</p>
+          <p className="text-gray-400">
+            {tasks.filter((task) => task.status === "doing").length + 1}
+          </p>
         </div>
         <div className="flex gap-4 text-white ">
           <FaPlus onClick={handleOpenForm} />
