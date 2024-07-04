@@ -19,7 +19,7 @@ export function ProfileMenu() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <div className="gap-1 cursor-pointer flex">
-          <div className="rounded-full h-8 w-8 items-center justify-center text-black bg-blue-400 px-2 py-1">
+          <div className="rounded-full cursor-pointer bg-blue-400 h-8 w-8 items-center flex text-black justify-center">
             SK
           </div>
           <RiArrowDropDownLine size={30} />
