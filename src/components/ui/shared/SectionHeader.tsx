@@ -6,7 +6,7 @@ import { IoFilterOutline } from "react-icons/io5";
 import { TbArrowsSort } from "react-icons/tb";
 import { FaLayerGroup } from "react-icons/fa6";
 import { GrHide } from "react-icons/gr";
-import { useTasks } from "@/components/ui/context/AppContext";
+import { useTasks } from "@/context/AppContext";
 import { NavLink } from "react-router-dom";
 
 const SectionHeader = () => {

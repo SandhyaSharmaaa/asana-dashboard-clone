@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
-import { TaskProvider } from "./components/ui/context/AppContext.tsx";
-import { ThemeProvider } from "./components/ui/context/ThemeContext.tsx";
+import { TaskProvider } from "./context/AppContext.tsx";
+import { ThemeProvider } from "./context/ThemeContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

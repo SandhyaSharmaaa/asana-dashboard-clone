@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { useTasks } from "@/components/ui/context/AppContext";
+import { useTasks } from "@/context/AppContext";
 
 interface AddTaskModalProps {
   isOpen: boolean;

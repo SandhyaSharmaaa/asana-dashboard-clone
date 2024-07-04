@@ -1,8 +1,8 @@
-import Header from "./Header";
-import SideNav from "./SideNav";
+import Header from "../components/ui/shared/Header";
+import SideNav from "../components/ui/shared/SideNav";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import SectionHeader from "./sections/SectionHeader";
+import SectionHeader from "@/components/ui/shared/SectionHeader";
 
 const Layout = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);

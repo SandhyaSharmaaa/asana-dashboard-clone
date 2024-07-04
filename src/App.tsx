@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import Layout from "./components/ui/shared/Layout";
-import Home from "./components/ui/shared/Home";
-import Page from "./components/ui/shared/Page";
+import Layout from "./layout/Layout";
+import Home from "./pages/sections/Home";
+import Page from "./pages/Page";
 
 function App() {
   return (

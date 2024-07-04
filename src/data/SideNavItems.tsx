@@ -1,4 +1,3 @@
-// SideNavItems.tsx
 import { MdHome } from "react-icons/md";
 import { FaRegCheckCircle, FaRegBell, FaPlus, FaSquare } from "react-icons/fa";
 import { GoDotFill, GoGoal } from "react-icons/go";

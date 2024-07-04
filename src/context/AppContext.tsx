@@ -5,7 +5,7 @@ import React, {
   useEffect,
   ReactNode,
 } from "react";
-import AddTaskModal from "../shared/AddTaskModal";
+import AddTaskModal from "../components/ui/shared/AddTaskModal";
 
 interface Task {
   id: string;
