@@ -37,10 +37,10 @@ const Header = ({ toggleSideNav }) => {
           <p className="text-white">30 Days left</p>
         </div>
         <ModeToggle />
-        <div className="border rounded-lg border-white px-2 py-1 cursor-pointer text-white">
+        <div className="border rounded-lg hover:bg-orange-400 hover:text-black border-white hover:border-zinc-800 px-2 py-1 cursor-pointer text-white">
           What's in my Trial
         </div>
-        <div className="border rounded-lg cursor-pointer bg-orange-400 text-black px-2 py-1">
+        <div className="border rounded-lg cursor-pointer hover:border-white hover:bg-zinc-800 hover:text-white bg-orange-400 text-black px-2 py-1">
           Add billing info
         </div>
         <ProfileMenu />

@@ -4,13 +4,15 @@ import { HiDotsVertical } from "react-icons/hi";
 import { FaPlus } from "react-icons/fa6";
 import { DoingData } from "@/data/index";
 import { useTasks } from "@/components/ui/context/AppContext";
+import { CiCircleCheck } from "react-icons/ci";
+import { RiContactsLine } from "react-icons/ri";
 
 const ToDo = () => {
   const { tasks, handleOpenForm, handleEditTask } = useTasks();
   console.log(tasks, "sandhya");
   return (
     <div className="flex flex-col gap-2  rounded-lg ">
-      <div className="flex gap-2 items-start justify-between ">
+      <div className="flex gap-2 items-center justify-between ">
         <div className="flex gap-2 items-center">
           <p className="text-white text-lg ">To Do</p>
           <p className="text-gray-400">
@@ -56,12 +58,14 @@ const ToDo = () => {
             onClick={() => handleEditTask(task.id)}
           >
             <CardContent className="flex items-center p-2 gap-2">
+              <CiCircleCheck />
               <p className="text-lg">{task.title}</p>
             </CardContent>
             <CardContent className="space-y-2 p-2">
               <p className="text-base text-white">{task.description}</p>
-              <div className="flex items-center justify-start gap-4">
-                <p className="text-gray-400">{task.date}</p>
+              <div className="flex items-center justify-start gap-4 text-gray-400">
+                <RiContactsLine />
+                <p>{task.date}</p>
               </div>
             </CardContent>
           </Card>

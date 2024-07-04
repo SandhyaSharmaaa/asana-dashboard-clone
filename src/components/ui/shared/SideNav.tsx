@@ -21,15 +21,15 @@ const SideNav: React.FC<SideNavProps> = ({ isCollapsed }) => {
       } section justify-between`}
     >
       <div className="flex flex-col gap-4 pt-4">
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-white text-base hover:text-zinc-800 hover:rounded-lg py-0.2">
+        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
           <MdHome className="text-gray-400" size={iconSize} />
           {!isCollapsed && "Home"}
         </span>
-        <span className="flex cursor-pointer gap-2 justify-start items-center px-4 bg-home hover:bg-white text-base hover:text-zinc-800 hover:rounded-lg py-0.2 ">
+        <span className="flex cursor-pointer gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition  ">
           <FaRegCheckCircle className="text-gray-400" size={iconSize} />
           {!isCollapsed && "My tasks"}
         </span>
-        <span className="flex cursor-pointer gap-2 justify-start items-center px-4 bg-home hover:bg-white text-base hover:text-zinc-800 hover:rounded-lg py-0.2">
+        <span className="flex cursor-pointer gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
           <FaRegBell className="text-gray-400" size={iconSize} />
 
           {!isCollapsed && "Inbox"}
@@ -40,15 +40,15 @@ const SideNav: React.FC<SideNavProps> = ({ isCollapsed }) => {
           <p>{!isCollapsed && "Insights"}</p>
           <FaPlus className="text-gray-400" />
         </span>
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-white text-base hover:text-zinc-800 hover:rounded-lg py-0.2">
+        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
           <TiFlowChildren className="text-gray-400" size={iconSize} />
           {!isCollapsed && "Reporting"}
         </span>
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-white text-base hover:text-zinc-800 hover:rounded-lg py-0.2">
+        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
           <FaRegFolderClosed className="text-gray-400" size={iconSize} />
           {!isCollapsed && "Portfolios"}
         </span>
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-white text-base hover:text-zinc-800 hover:rounded-lg py-0.2">
+        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
           <GoGoal className="text-gray-400" size={iconSize} />
           {!isCollapsed && "Goals"}
         </span>
@@ -56,7 +56,7 @@ const SideNav: React.FC<SideNavProps> = ({ isCollapsed }) => {
           <p>{!isCollapsed && "Projects"}</p>
           <FaPlus className="text-gray-400" />
         </span>
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-white text-base hover:text-zinc-800 hover:rounded-lg py-0.2">
+        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
           <FaSquare className="text-blue-400" size={iconSize} />
           {!isCollapsed && "Tract work requests"}
         </span>
@@ -65,7 +65,7 @@ const SideNav: React.FC<SideNavProps> = ({ isCollapsed }) => {
           <FaPlus className="text-gray-400" />
         </span>
         {!isCollapsed && (
-          <span className="flex cursor-pointer gap-2 w-full items-center px-4 bg-home hover:bg-white text-base hover:text-zinc-800 hover:rounded-lg py-0.2">
+          <span className="flex cursor-pointer gap-2 w-full items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
             <FaUserGroup className="text-gray-400" size={iconSize} />
             <span className="cursor-pointer flex w-full items-center justify-between ">
               Sunny's first team
