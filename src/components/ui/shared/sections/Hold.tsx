@@ -3,6 +3,8 @@ import { HiDotsVertical } from "react-icons/hi";
 import { FaPlus } from "react-icons/fa6";
 import { useTasks } from "@/components/ui/context/AppContext";
 import { Card, CardContent } from "../../card";
+import { CiCircleCheck } from "react-icons/ci";
+import { RiContactsLine } from "react-icons/ri";
 
 const Hold: React.FC = () => {
   const { tasks, handleOpenForm, handleEditTask } = useTasks();
@@ -35,12 +37,14 @@ const Hold: React.FC = () => {
             onClick={() => handleEditTask(task.id)}
           >
             <CardContent className="flex items-center p-2 gap-2">
+              <CiCircleCheck size={20} />
               <p className="text-lg">{task.title}</p>
             </CardContent>
             <CardContent className="space-y-2 p-2">
               <p className="text-base text-white">{task.description}</p>
-              <div className="flex items-center justify-start gap-4">
-                <p className="text-gray-400">{task.date}</p>
+              <div className="flex items-center justify-start gap-4 text-gray-400">
+                <RiContactsLine size={20} />
+                <p>{task.date}</p>
               </div>
             </CardContent>
           </Card>

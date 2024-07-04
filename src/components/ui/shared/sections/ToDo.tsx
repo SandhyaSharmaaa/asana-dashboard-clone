@@ -58,13 +58,13 @@ const ToDo = () => {
             onClick={() => handleEditTask(task.id)}
           >
             <CardContent className="flex items-center p-2 gap-2">
-              <CiCircleCheck />
+              <CiCircleCheck size={20} />
               <p className="text-lg">{task.title}</p>
             </CardContent>
             <CardContent className="space-y-2 p-2">
               <p className="text-base text-white">{task.description}</p>
               <div className="flex items-center justify-start gap-4 text-gray-400">
-                <RiContactsLine />
+                <RiContactsLine size={20} />
                 <p>{task.date}</p>
               </div>
             </CardContent>
