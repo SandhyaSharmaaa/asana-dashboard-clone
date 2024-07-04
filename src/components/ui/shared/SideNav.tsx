@@ -6,6 +6,7 @@ import { TiFlowChildren } from "react-icons/ti";
 import { FaRegFolderClosed, FaUserGroup } from "react-icons/fa6";
 import { GrFormNext } from "react-icons/gr";
 import { FiMail } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 interface SideNavProps {
   isCollapsed: boolean;
@@ -13,7 +14,6 @@ interface SideNavProps {
 
 const SideNav: React.FC<SideNavProps> = ({ isCollapsed }) => {
   const iconSize = 24;
-
   return (
     <div
       className={`flex flex-col ${
@@ -21,45 +21,94 @@ const SideNav: React.FC<SideNavProps> = ({ isCollapsed }) => {
       } section justify-between`}
     >
       <div className="flex flex-col gap-4 pt-4">
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
+        <NavLink
+          to={"/"}
+          className={({ isActive }) =>
+            ` ${
+              isActive && "bg-zinc-600 rounded-r-lg"
+            } cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition `
+          }
+        >
           <MdHome className="text-gray-400" size={iconSize} />
           {!isCollapsed && "Home"}
-        </span>
-        <span className="flex cursor-pointer gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition  ">
+        </NavLink>
+        <NavLink
+          to={"/page/my-tasks"}
+          className={({ isActive }) =>
+            ` ${
+              isActive && "bg-zinc-600 rounded-r-lg"
+            } flex cursor-pointer gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition  `
+          }
+        >
           <FaRegCheckCircle className="text-gray-400" size={iconSize} />
           {!isCollapsed && "My tasks"}
-        </span>
-        <span className="flex cursor-pointer gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
+        </NavLink>
+        <NavLink
+          to="/page/inbox"
+          className={({ isActive }) =>
+            ` ${
+              isActive && "bg-zinc-600 rounded-r-lg"
+            } flex cursor-pointer gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition `
+          }
+        >
           <FaRegBell className="text-gray-400" size={iconSize} />
 
           {!isCollapsed && "Inbox"}
           <GoDotFill className="text-orange-400" />
-        </span>
+        </NavLink>
         <hr className="border-zinc-700 w-full"></hr>
         <span className="cursor-pointer flex px-4 items-center justify-between">
           <p>{!isCollapsed && "Insights"}</p>
           <FaPlus className="text-gray-400" />
         </span>
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
+        <NavLink
+          to="/page/reporting"
+          className={({ isActive }) =>
+            ` ${
+              isActive && "bg-zinc-600 rounded-r-lg"
+            } cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition `
+          }
+        >
           <TiFlowChildren className="text-gray-400" size={iconSize} />
           {!isCollapsed && "Reporting"}
-        </span>
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
+        </NavLink>
+        <NavLink
+          to="/page/portfolios"
+          className={({ isActive }) =>
+            ` ${
+              isActive && "bg-zinc-600 rounded-r-lg"
+            } cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition `
+          }
+        >
           <FaRegFolderClosed className="text-gray-400" size={iconSize} />
           {!isCollapsed && "Portfolios"}
-        </span>
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
+        </NavLink>
+        <NavLink
+          to="/page/goals"
+          className={({ isActive }) =>
+            ` ${
+              isActive && "bg-zinc-600 rounded-r-lg"
+            } cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition `
+          }
+        >
           <GoGoal className="text-gray-400" size={iconSize} />
           {!isCollapsed && "Goals"}
-        </span>
+        </NavLink>
         <span className="cursor-pointer flex px-4 items-center justify-between">
           <p>{!isCollapsed && "Projects"}</p>
           <FaPlus className="text-gray-400" />
         </span>
-        <span className="cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
+        <NavLink
+          to="/page/track-work"
+          className={({ isActive }) =>
+            ` ${
+              isActive && "bg-zinc-600 rounded-r-lg"
+            } cursor-pointer flex gap-2 justify-start items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition `
+          }
+        >
           <FaSquare className="text-blue-400" size={iconSize} />
           {!isCollapsed && "Tract work requests"}
-        </span>
+        </NavLink>
         <span className="cursor-pointer flex px-4 items-center justify-between">
           <p>{!isCollapsed && "Teams"}</p>
           <FaPlus className="text-gray-400" />
@@ -67,10 +116,17 @@ const SideNav: React.FC<SideNavProps> = ({ isCollapsed }) => {
         {!isCollapsed && (
           <span className="flex cursor-pointer gap-2 w-full items-center px-4 bg-home hover:bg-zinc-600   hover:rounded-r-lg py-1 transition ">
             <FaUserGroup className="text-gray-400" size={iconSize} />
-            <span className="cursor-pointer flex w-full items-center justify-between ">
+            <NavLink
+              to="/page/team"
+              className={({ isActive }) =>
+                ` ${
+                  isActive && "bg-zinc-600 rounded-r-lg"
+                } cursor-pointer flex w-full items-center justify-between `
+              }
+            >
               Sunny's first team
               <GrFormNext className="text-gray-400 text-xl" />
-            </span>
+            </NavLink>
           </span>
         )}
       </div>

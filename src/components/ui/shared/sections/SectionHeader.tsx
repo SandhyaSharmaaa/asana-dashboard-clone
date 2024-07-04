@@ -7,6 +7,7 @@ import { TbArrowsSort } from "react-icons/tb";
 import { FaLayerGroup } from "react-icons/fa6";
 import { GrHide } from "react-icons/gr";
 import { useTasks } from "@/components/ui/context/AppContext";
+import { NavLink } from "react-router-dom";
 
 const SectionHeader = () => {
   const { handleOpenForm } = useTasks();
@@ -26,15 +27,20 @@ const SectionHeader = () => {
       </div>
       <div className="flex justify-between text-gray-400">
         {sectionHeaderItems.map((item, index) => (
-          <span
+          <NavLink
+            to={item.link}
             key={index}
-            className={`flex items-center hover:text-white justify-center gap-2 cursor-pointer flex-grow ${
-              item.className || ""
-            }`}
+            className={({ isActive }) =>
+              `${
+                isActive && "text-white"
+              } flex items-center hover:text-white justify-center gap-2 cursor-pointer flex-grow ${
+                item.className || ""
+              }`
+            }
           >
             {item.icon}
             {item.text && <span>{item.text}</span>}
-          </span>
+          </NavLink>
         ))}
       </div>
       <hr className="border-zinc-700 w-full" />

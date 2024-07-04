@@ -1,7 +1,8 @@
 import Header from "./Header";
 import SideNav from "./SideNav";
-import Home from "./Home";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import SectionHeader from "./sections/SectionHeader";
 
 const Layout = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -15,7 +16,10 @@ const Layout = () => {
       <section className="flex h-full flex-1">
         <SideNav isCollapsed={isCollapsed} />
         <main className="flex-1 home">
-          <Home />
+          <div className="flex flex-col gap-4 w-full">
+            <SectionHeader />
+          </div>
+          <Outlet />
         </main>
       </section>
     </div>

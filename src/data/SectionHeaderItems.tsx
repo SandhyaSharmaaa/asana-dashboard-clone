@@ -14,18 +14,24 @@ interface SectionHeaderItem {
   icon: React.ReactNode;
   text?: string;
   className?: string;
+  link?: string;
 }
 
 export const sectionHeaderItems: SectionHeaderItem[] = [
-  { icon: <TfiLayoutListThumbAlt />, text: "List" },
-  { icon: <MdLeaderboard />, text: "Board", className: "text-white" },
-  { icon: <FaTimeline />, text: "Timeline" },
-  { icon: <TbLayoutDashboard />, text: "Dashboard" },
-  { icon: <SlCalender />, text: "Calender" },
-  { icon: <TbClipboardText />, text: "Overview" },
-  { icon: <RiFlowChart />, text: "Workflow" },
-  { icon: <MdOutlineMessage />, text: "Messages" },
-  { icon: <IoMdAttach />, text: "Files" },
-  { icon: <LuGanttChartSquare />, text: "Gantt" },
-  { icon: <FaPlus /> },
+  { icon: <TfiLayoutListThumbAlt />, text: "List", link: "/page/list" },
+  {
+    icon: <MdLeaderboard />,
+    text: "Board",
+
+    link: "/",
+  },
+  { icon: <FaTimeline />, text: "Timeline", link: "/page/timeline" },
+  { icon: <TbLayoutDashboard />, text: "Dashboard", link: "/page/dashboard" },
+  { icon: <SlCalender />, text: "Calender", link: "/page/calender" },
+  { icon: <TbClipboardText />, text: "Overview", link: "/page/overview" },
+  { icon: <RiFlowChart />, text: "Workflow", link: "/page/workflow" },
+  { icon: <MdOutlineMessage />, text: "Messages", link: "/page/messages" },
+  { icon: <IoMdAttach />, text: "Files", link: "/page/files" },
+  { icon: <LuGanttChartSquare />, text: "Gantt", link: "/page/gantt" },
+  { icon: <FaPlus />, link: "/page/add" },
 ];
