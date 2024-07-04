@@ -17,9 +17,10 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, setIsOpen }) => {
   const { addTask, currEditTask, isEdit, handleUpdateTask } = useTasks();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [status, setStatus] = useState<"to do" | "doing" | "done" | "hold">(
-    "to do"
-  );
+  const [error, setError] = useState("");
+  const [status, setStatus] = useState<
+    "to do" | "doing" | "done" | "hold" | ""
+  >("");
   const [date, setDate] = useState("");
 
   const handleStatusChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -27,7 +28,10 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, setIsOpen }) => {
   };
 
   const handleSubmit = () => {
-    console.log(isEdit);
+    if (!title || !description || !date || !status) {
+      setError("Please fill all the fields given below");
+      return;
+    }
 
     if (isEdit) {
       handleUpdateTask({
@@ -41,6 +45,10 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, setIsOpen }) => {
       addTask({ id: crypto.randomUUID(), title, description, status, date });
     }
     setIsOpen(false);
+    setDescription("");
+    setTitle("");
+    setDate("");
+    setStatus("");
   };
   useEffect(() => {
     if (isEdit && currEditTask?.id) {
@@ -59,6 +67,7 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, setIsOpen }) => {
       <DialogContent className="section">
         <DialogHeader>
           <DialogTitle>{isEdit ? "Update Task" : "Add New Task"}</DialogTitle>
+          {error && <p className="text-red-400">{error}</p>}
         </DialogHeader>
         <div className="flex flex-col space-y-2  text-sm font-bold">
           <label className="">Status</label>
@@ -68,6 +77,10 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, setIsOpen }) => {
             value={status}
             onChange={handleStatusChange}
           >
+            <option value="" disabled>
+              Select Status
+            </option>
+
             <option value="to do">To Do</option>
             <option value="doing">Doing</option>
             <option value="done">Done</option>
@@ -97,6 +110,7 @@ const AddTaskModal: React.FC<AddTaskModalProps> = ({ isOpen, setIsOpen }) => {
             className="shadow-lg border rounded w-full py-2 px-3  focus:outline-blue-950"
             placeholder="Enter task date"
             value={date}
+            type="date"
             onChange={(e) => setDate(e.target.value)}
           />
 

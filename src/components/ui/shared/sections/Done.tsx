@@ -7,7 +7,7 @@ const Done = () => {
   const { tasks, handleOpenForm, handleEditTask } = useTasks();
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-2  rounded-lg ">
       <div className="flex gap-2 items-start justify-between">
         <div className="flex gap-2 items-center">
           <p className="text-white text-lg ">Done</p>
@@ -25,7 +25,7 @@ const Done = () => {
         .map((task, index) => (
           <Card
             key={index}
-            className="section border-zinc-700 rounded-lg p-2"
+            className="section border-zinc-700 rounded-lg p-2 cursor-pointer  hover:border-zinc-500 transition"
             onClick={() => handleEditTask(task.id)}
           >
             <CardContent className="flex items-center p-2 gap-2">

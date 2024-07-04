@@ -23,7 +23,10 @@ const ToDo = () => {
         </div>
       </div>
       {DoingData.map((item) => (
-        <Card key={item.id} className=" section border-zinc-700 rounded-lg p-2">
+        <Card
+          key={item.id}
+          className=" section border-zinc-700 rounded-lg p-2 cursor-pointer hover:border-zinc-500 transition "
+        >
           <CardContent className="flex items-center p-2 gap-2">
             <p className=" text-lg">{item.icon1}</p>
             <p className="text-base text-white">{item.text}</p>
@@ -49,7 +52,7 @@ const ToDo = () => {
         .map((task, index) => (
           <Card
             key={index}
-            className="section border-zinc-700 rounded-lg p-2"
+            className="section border-zinc-700 rounded-lg p-2 cursor-pointer hover:border-zinc-500 transition"
             onClick={() => handleEditTask(task.id)}
           >
             <CardContent className="flex items-center p-2 gap-2">
